@@ -9,9 +9,6 @@ func New(length int, fill string) Row {
 	return Row{}
 }
 
-// HINT
-// Nutzen Sie die Funktionen `strings.Split` und `strings.Repeat`.
-
 // String gibt die `Row` als String zurück.
 // Die Elemente sind durch ` | ` getrennt und von `|` umgeben.
 func (r Row) String() string {
@@ -19,16 +16,9 @@ func (r Row) String() string {
 	return ""
 }
 
-// HINT
-// Nutzen Sie die Funktionen `fmt.Sprintf` und `strings.Join`.
-
 // ContainsOnly erwartet einen String.
 // Gibt `true` zurück, wenn die `Row` nur aus dem String besteht.
 func (r Row) ContainsOnly(s string) bool {
 	// TODO
 	return true
 }
-
-// HINT
-// Nutzen Sie eine Schleifen, um durch die Row zu iterieren.
-// Falls Sie ein Element finden, das nicht s entspricht, geben Sie vorzeitig `false` zurück.

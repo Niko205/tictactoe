@@ -1,7 +1,6 @@
 package board
 
 import (
-	"fmt"
 	"strings"
 	"tictactoe/rows"
 )
@@ -12,9 +11,7 @@ type Board []rows.Row
 // Liefert ein neues `Board` zurück, das mit dem Zeichen gefüllt ist.
 func New(height, width int, fill string) Board {
 	board := make(Board, height)
-	for i := range board {
-		board[i] = rows.New(width, fill)
-	}
+	// TODO
 	return board
 }
 
@@ -26,13 +23,9 @@ func New(height, width int, fill string) Board {
 // Die Zeilen sind durch Trenner der Form `+---+---+---+` getrennt.
 func (b Board) String() string {
 	rowStrings := make([]string, len(b))
-	divider := fmt.Sprintf("\n%s+\n", strings.Repeat("+---", len(b[0])))
-
-	for i, row := range b {
-		rowStrings[i] = row.String()
-	}
-
-	return fmt.Sprintf("%s%s%s", divider, strings.Join(rowStrings, divider), divider)
+	divider := "\n"
+	// TODO
+	return strings.Join(rowStrings, divider)
 }
 
 // HINT
@@ -45,7 +38,8 @@ func (b Board) String() string {
 
 // Row erwartet eine Zeilennummer und liefert diese Zeile zurück.
 func (b Board) Row(row int) rows.Row {
-	return b[row]
+	// TODO
+	return rows.Row{}
 }
 
 // HINT
@@ -55,9 +49,7 @@ func (b Board) Row(row int) rows.Row {
 // Der Rückgabetype ist Row, da Zeilen und Spalten gleich sind.
 func (b Board) Col(col int) rows.Row {
 	c := make(rows.Row, len(b))
-	for i, r := range b {
-		c[i] = r[col]
-	}
+	// TODO
 	return c
 }
 
@@ -70,13 +62,7 @@ func (b Board) Col(col int) rows.Row {
 // Die Diagonalennummer ist 0 für die Hauptdiagonale und 1 für die Nebendiagonale.
 func (b Board) Diag(diag int) rows.Row {
 	d := make(rows.Row, len(b))
-	for i, r := range b {
-		if diag == 0 {
-			d[i] = r[i]
-		} else {
-			d[i] = r[len(r)-1-i]
-		}
-	}
+	// TODO
 	return d
 }
 
@@ -88,7 +74,7 @@ func (b Board) Diag(diag int) rows.Row {
 // Set erwartet eine Zeilen- und eine Spaltennummer und ein Zeichen.
 // Setzt das Zeichen an die entsprechende Stelle.
 func (b Board) Set(row, col int, fill string) {
-	b[row][col] = fill
+	// TODO
 }
 
 // HINT
@@ -96,13 +82,7 @@ func (b Board) Set(row, col int, fill string) {
 
 // Full gibt `true` zurück, wenn das Board voll ist.
 func (b Board) Full() bool {
-	for _, r := range b {
-		for _, v := range r {
-			if v == " " {
-				return false
-			}
-		}
-	}
+	// TODO
 	return true
 }
 
@@ -113,7 +93,8 @@ func (b Board) Full() bool {
 // RowContainsOnly erwartet eine Zeilennummer und ein Zeichen.
 // Gibt `true` zurück, wenn die Zeile nur aus dem Zeichen besteht.
 func (b Board) RowContainsOnly(row int, s string) bool {
-	return b.Row(row).ContainsOnly(s)
+	// TODO
+	return false
 }
 
 // HINT
@@ -122,7 +103,8 @@ func (b Board) RowContainsOnly(row int, s string) bool {
 // ColContainsOnly erwartet eine Spaltennummer und ein Zeichen.
 // Gibt `true` zurück, wenn die Spalte nur aus dem Zeichen besteht.
 func (b Board) ColContainsOnly(col int, s string) bool {
-	return b.Col(col).ContainsOnly(s)
+	// TODO
+	return false
 }
 
 // HINT
@@ -132,7 +114,8 @@ func (b Board) ColContainsOnly(col int, s string) bool {
 // Gibt `true` zurück, wenn die Diagonale nur aus dem Zeichen besteht.
 // Die Diagonalennummer ist 0 für die Hauptdiagonale und 1 für die Nebendiagonale.
 func (b Board) DiagContainsOnly(diag int, s string) bool {
-	return b.Diag(diag).ContainsOnly(s)
+	// TODO
+	return false
 }
 
 // HINT

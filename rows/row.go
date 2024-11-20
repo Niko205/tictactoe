@@ -1,16 +1,12 @@
 package rows
 
-import (
-	"fmt"
-	"strings"
-)
-
 type Row []string
 
 // New erwartet eine Länge und einen String.
 // Gibt eine neue `Row` zurück, die mit dem String gefüllt ist.
 func New(length int, fill string) Row {
-	return strings.Split(strings.Repeat(fill, length), "")
+	// TODO
+	return Row{}
 }
 
 // HINT
@@ -19,7 +15,8 @@ func New(length int, fill string) Row {
 // String gibt die `Row` als String zurück.
 // Die Elemente sind durch ` | ` getrennt und von `|` umgeben.
 func (r Row) String() string {
-	return fmt.Sprintf("| %v |", strings.Join(r, " | "))
+	// TODO
+	return ""
 }
 
 // HINT
@@ -28,11 +25,7 @@ func (r Row) String() string {
 // ContainsOnly erwartet einen String.
 // Gibt `true` zurück, wenn die `Row` nur aus dem String besteht.
 func (r Row) ContainsOnly(s string) bool {
-	for _, v := range r {
-		if v != s {
-			return false
-		}
-	}
+	// TODO
 	return true
 }
 

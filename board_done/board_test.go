@@ -48,6 +48,21 @@ func ExampleBoard_Col() {
 	// | * | * | * |
 }
 
+func ExampleBoard_Diag() {
+	board := Board{
+		{"1", "2", "3"},
+		{"4", "5", "6"},
+		{"7", "8", "9"},
+	}
+
+	fmt.Println(board.Diag(0))
+	fmt.Println(board.Diag(1))
+
+	// Output:
+	// | 1 | 5 | 9 |
+	// | 3 | 5 | 7 |
+}
+
 func ExampleBoard_Set() {
 	board := New(3, 3, "*")
 
@@ -64,22 +79,6 @@ func ExampleBoard_Set() {
 	// | * | * | * |
 	// +---+---+---+
 }
-
-func ExampleBoard_Diag() {
-	board := Board{
-		{"1", "2", "3"},
-		{"4", "5", "6"},
-		{"7", "8", "9"},
-	}
-
-	fmt.Println(board.Diag(0))
-	fmt.Println(board.Diag(1))
-
-	// Output:
-	// | 1 | 5 | 9 |
-	// | 3 | 5 | 7 |
-}
-
 func ExampleBoard_Full() {
 	board1 := Board{
 		{"X", "O", "X"},
